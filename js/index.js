@@ -9,6 +9,10 @@ const bio = document.querySelector('.bio');
 const address = document.querySelector('.address');
 const errorField = document.querySelector('#error_field');
 
+
+//getInfo function will save the username values. if the data was already in local storage it will print that we are using
+//the data from local storage. if not, it will get the data from server. if it was successful, it will check the username
+//exict or not, 
 async function getInfo(e) {
     let username = nameInput.value;
     e.preventDefault();
@@ -25,6 +29,7 @@ async function getInfo(e) {
                 let response = await fetch(`https://api.github.com/users/` + username);
                 let obj = await response.json();
                 if (response.status != 200) {
+                    getDummyInfo();
                     if(response.status == 404){
                         errorField.innerHTML = '<p>' + "User not found!" + '</p>';
                     }
@@ -35,7 +40,6 @@ async function getInfo(e) {
                     else { 
                         errorField.innerHTML = '<p>' + "Unkown Error! "+ response.status + '</p>';
                     }
-                    getDummyInfo();
                     return Promise.reject(`Request failed with error ${response.status}`);
                 }
                 errorField.innerHTML = '<p>' + "" + '</p>';

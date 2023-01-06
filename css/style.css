@@ -21,6 +21,7 @@ body {
     width: 960px;
 }
 
+/*make a fixed clear box in the middle of the page */
 .box {
     width: 50%;
     min-height: 60%;
@@ -33,9 +34,7 @@ body {
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: aliceblue;
-    /* background-color:rgba(229, 229, 229, 0.8); */
     opacity: 0.8;
-    
     padding: 5px;
     z-index: 100;
     border-radius: 10px;
@@ -46,7 +45,7 @@ body {
 }
 
 
-
+/* set the right format for the avatar*/
 .avatar{
     width: 150px;
     min-height: 100px;
@@ -55,6 +54,7 @@ body {
     opacity: 1;
 }
 
+/* set the position, color and format of the header*/
 .header {
     position: relative;
     color: darkblue;
@@ -62,19 +62,23 @@ body {
     font-size: 30px;
 }
 
-
+/* define the width of form and result box (left and right box) */
 .form {
     width: 40%;
 }
 
+.result{
+    width: 50%;
+}
 
-
+/* define the format of the border of two boxes. */
 .fieldset {
     padding: 10px;
     border-radius: 10px;
 }
 
 
+/* define the format of submit button*/
 .button {
     width: 120px;
     height: 25px;
@@ -86,7 +90,3 @@ body {
 }
 
 
-.saved_card {
-    display: none;
-}
-  
