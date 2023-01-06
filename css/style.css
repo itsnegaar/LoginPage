@@ -1,0 +1,82 @@
+
+
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+.box {
+    width: 50%;
+    min-height: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /* background-color: aliceblue; */
+    background-color:rgba(229, 229, 229, 0.8);
+    /* opacity: 0.8; */
+    
+    padding: 5px;
+    z-index: 100;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.avatar{
+    width: 150px;
+    min-height: 100px;
+    top: 80%;
+    left:80%;
+    opacity: 1;
+}
+
+.header {
+    position: relative;
+    color: darkblue;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+.form {
+    width: 40%;
+}
+
+
+
+.fieldset {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.button {
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    margin: 5px;
+    background-color:  darkblue;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.saved_card {
+    display: none;
+}
+  
