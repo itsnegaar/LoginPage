@@ -1,0 +1,103 @@
+/*  
+    Add background image and set the container div. 
+    - The goal here is a background image on a website that covers the entire browser window at all times.
+*/
+
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*
+    The container holds all objects in this page. for that I use flex display. 
+*/
+
+
+.box {
+    width: 50%;
+    min-height: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 0.6;
+    padding: 5px;
+    z-index: 100;
+
+    border-radius: 10px;
+    
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*
+    Header specify fieldset header style
+*/
+
+
+.avtar{
+    width: 70%;
+    min-height: 80%;
+    top: 80%;
+    left:80%;
+    opacity: 1;
+}
+
+.header {
+    position: relative;
+    color: darkblue;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+/* 
+    form card width
+*/
+.form {
+    width: 40%;
+}
+
+/*
+    fieldset styles
+*/
+
+.fieldset {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*
+    All Buttons unic style
+*/
+.button {
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    margin: 5px;
+    background-color:  darkblue;
+    color: white;
+    border-radius: 10px;
+}
+
+/*
+    saved Answer section style
+*/
+
+.saved_card {
+    display: none;
+}
+  
+/*
+    Error section 
+*/
+.action_result {
+    display: none;
+}
