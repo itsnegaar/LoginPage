@@ -1,17 +1,25 @@
-/*  
-    Add background image and set the container div. 
-    - The goal here is a background image on a website that covers the entire browser window at all times.
-*/
+/* define font family, font size, color and etc for the whole page */
+html * {
+    font-size: 16px;
+    line-height: 1.625;
+    color: black;
+    font-family: Nunito, sans-serif;
+}
 
+
+/* define background image */
 body {
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
-/*
-    The container holds all objects in this page. for that I use flex display. 
-*/
 
+/* when pages resize elements wont move */
+#wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
 
 .box {
     width: 50%;
@@ -24,28 +32,24 @@ body {
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: white;
-    opacity: 0.6;
+    background-color: aliceblue;
+    /* background-color:rgba(229, 229, 229, 0.8); */
+    opacity: 0.8;
+    
     padding: 5px;
     z-index: 100;
-
     border-radius: 10px;
-    
-    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
 
-/*
-    Header specify fieldset header style
-*/
 
 
-.avtar{
-    width: 70%;
-    min-height: 80%;
+.avatar{
+    width: 150px;
+    min-height: 100px;
     top: 80%;
     left:80%;
     opacity: 1;
@@ -58,25 +62,19 @@ body {
     font-size: 30px;
 }
 
-/* 
-    form card width
-*/
+
 .form {
     width: 40%;
 }
 
-/*
-    fieldset styles
-*/
+
 
 .fieldset {
     padding: 10px;
     border-radius: 10px;
 }
 
-/*
-    All Buttons unic style
-*/
+
 .button {
     width: 120px;
     height: 25px;
@@ -87,17 +85,8 @@ body {
     border-radius: 10px;
 }
 
-/*
-    saved Answer section style
-*/
 
 .saved_card {
     display: none;
 }
   
-/*
-    Error section 
-*/
-.action_result {
-    display: none;
-}

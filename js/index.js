@@ -69,7 +69,7 @@ function getUserInfo(obj) {
     if(obj.blog==null)
     {blog.innerHTML = '<span>' + 'Blog: -' + '</span>';}
     else
-    blog.innerHTML = '<span>' + 'Blog' + obj.blog + '</span>';
+    blog.innerHTML = '<span>' + 'Blog: ' + obj.blog + '</span>';
     if(obj.bio==null)
     {bio.innerHTML = '<span>' + 'Bio: -' + '</span>';}
     else
@@ -82,16 +82,6 @@ function getUserInfo(obj) {
 }
 
 
-
-
-// // show error 
-// function showAlert(title) {
-//     actionResult.style.display = "block";
-//     actionResult.innerHTML = "<span>" + title + "</span>";
-//     setTimeout(() => { // removes the error message from screen after 4 seconds.
-//         actionResult.style.display = "none";
-//     }, 4000);
-// }
-
 submitButton.addEventListener('click', getInfo);
 clearButton.addEventListener('click', removeSavedAnswer);
+window.localStorage.clear();
