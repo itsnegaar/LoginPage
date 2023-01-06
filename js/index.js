@@ -12,7 +12,10 @@ const errorField = document.querySelector('#error_field');
 
 //getInfo function will save the username values. if the data was already in local storage it will print that we are using
 //the data from local storage. if not, it will get the data from server. if it was successful, it will check the username
-//exict or not, 
+//exict or not, then it will handle 403 error and other unknown errors, and save the user in local storage.
+//in the catvh part we will handle the network error
+//
+
 async function getInfo(e) {
     let username = nameInput.value;
     e.preventDefault();
@@ -56,6 +59,7 @@ async function getInfo(e) {
         }
 }
 
+//dummy info will be shown when user not found
 function getDummyInfo(){
     avatar.innerHTML = '<img src="' + "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" + '" alt="avatar" class="avatar">';
     FullName.innerHTML = '<span>' + 'John Doe' + '</span>';
@@ -63,7 +67,8 @@ function getDummyInfo(){
     bio.innerHTML = '<span>' + "Well, no users found! :(" + '</span>';
 }
 
-// showing result to user
+// showing result to user. if the wanted info was null it will show the name of information and a hyphen, if not 
+// it wil print the name of info and the correct information
 function getUserInfo(obj) {
     avatar.innerHTML = '<img src="' + obj.avatar_url + '" alt="avatar" class="avatar">';
     if(obj.name==null)
@@ -85,7 +90,8 @@ function getUserInfo(obj) {
     
 }
 
-
+//after clicking submit button it will start getting infos.
 submitButton.addEventListener('click', getInfo);
-clearButton.addEventListener('click', removeSavedAnswer);
+
+//clear storage
 window.localStorage.clear();
